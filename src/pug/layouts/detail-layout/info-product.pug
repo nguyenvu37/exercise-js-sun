@@ -1,0 +1,22 @@
+.info-product
+    .box
+        article
+            .info-product__title
+                each item in listInfoProduct
+                    a(href="#" class=item.className)= item.content
+            .info-product__content
+                +info-content('../../../../assets/img/detail/img1.jpg', 'info-text1', 'info-img1', 'info-product1')
+                +info-content('../../../../assets/img/detail/img6.jpg', 'info-text2', 'info-img2', 'info-product2')
+                +info-content('../../../../assets/img/detail/img7.jpg', 'info-text1', 'info-img1', 'info-product3')
+                +info-content('../../../../assets/img/detail/img5.jpg', 'info-text2', 'info-img2', 'info-product4')
+        aside
+            .info-product__selling
+                h3 sản phẩm bán chạy
+                +top-selling('item-border')
+                +top-selling('item-border')
+                +top-selling
+            .info-product__selling
+                h3 sản phẩm mua nhiều
+                +top-selling('item-border')
+                +top-selling('item-border')
+                +top-selling

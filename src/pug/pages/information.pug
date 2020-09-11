@@ -1,0 +1,28 @@
+extends ../layouts/information-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathInformation)
+        // Process Checkout
+        .box
+            +process("page-information", "Step 2: Thông tin khách hàng")
+        // Content Information Checkout
+        section
+            .information-checkout
+                .box
+                    .information-checkout__content
+                        .information-checkout__content__title.title-content
+                            h1 THÔNG TIN THANH TOÁN
+                        .information-checkout__content__form.form
+                            form#formCheckout(name="inforForm" action="#")
+                                +form-group('Họ và Tên *', 'text', "infor-receiver", "receiver", "err-receiver")
+                                +form-group('Địa chỉ *', 'text', "infor-address", "address", "err-address")
+                                +form-group('Email *', 'text', "infor-email", "email", "err-email")
+                                +form-group('Số điện thoại *', 'telephone', "infor-phone", "phone", "err-phone")
+                                .information-checkout__form__btn.btn-form
+                                    a(href="cart.html") Quay lại giỏ hàng
+                                    button Tiếp tục

@@ -1,0 +1,42 @@
+extends ../layouts/account-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathAccount)
+        // Content Account
+        section
+            .box
+                .account
+                    article
+                        .account__content
+                            .account__content__title.title-content
+                                h1 tài khoản
+                            .account__content__table
+                                table
+                                    tr
+                                        each item in listTableAcc
+                                            th(class=item.className)= item.content
+                                    +table-acc('Đã thanh toán', '0', 'disable')
+                                    +table-acc('Đã thanh toán', '0', 'disable')
+                                    +table-acc('Đã thanh toán', '0', 'disable')
+                                    +table-acc('Thanh toán 50%', '275.000')
+                    aside
+                        .account__info
+                            .account__info__title.title-content
+                                h3 Chi tiết tài khoản
+                            .account__info__user.info-item
+                                i.fas.fa-user
+                                .account__info__user__text
+                                    h2 GiangLe
+                                    p Leanhgiang89@gmail.com
+                            .account__info__address.info-item
+                                i.fas.fa-map-marker-alt
+                                .account__info__address__text
+                                    p Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình Hà Nội
+                            .account__info__phone.info-item
+                                i.fas.fa-phone-alt
+                                p (04) 3786 8904

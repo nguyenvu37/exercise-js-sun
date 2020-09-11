@@ -1,0 +1,30 @@
+extends ../layouts/blog-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathBlog)
+        // Blog content
+        section
+            .box
+                .blog
+                    .blog__title.title-content
+                        h1 blog
+                    .blog__content
+                        .blog__content__pagination
+                            +pagination
+                        .blog__content__posts
+                            +blog-item('../../../assets/img/blog/img7.jpg', 'posts-item1')
+                            +blog-item('../../../assets/img/blog/img2.jpg', 'posts-item2')
+                            +blog-item('../../../assets/img/blog/img9.jpg', 'posts-item3')
+                            +blog-item('../../../assets/img/blog/img4.jpg', 'posts-item4')
+                            +blog-item('../../../assets/img/blog/img3.jpg', 'posts-item5')
+                            +blog-item('../../../assets/img/blog/img6.jpg', 'posts-item6')
+                            +blog-item('../../../assets/img/blog/img8.jpg', 'posts-item7')
+                            +blog-item('../../../assets/img/blog/img5.jpg', 'posts-item8')
+                            +blog-item('../../../assets/img/blog/img1.jpg', 'posts-item9')
+                        .blog__content__pagination
+                            +pagination     

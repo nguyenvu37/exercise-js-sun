@@ -1,0 +1,208 @@
+mixin product-cart(img)
+    .nav__cart__info__product
+        img(src=img alt="")
+        .nav__cart__info__product__content
+            p   Áo sơ mi Nam
+            span.price 120.000
+                small đ
+        i.fas.fa-times
+
+mixin policy(className, img, param)
+    div(class=className)
+        img(src=img)
+        p= param
+
+mixin testimonial(img)
+    .testimonial__bg__content__img
+        .testimonial__bg__content__img__item
+            img(src=img)
+            span TUTILE
+                br
+                i Giám đốc phát triển sản phẩm
+        .testimonial__bg__content__img__text
+            p "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto"
+            span TUTILE  
+                i _Giám đốc phát triển sản phẩm
+
+mixin product-item(img, h4, price, old, disable, className)
+    .product__items__detail(class=className)
+        img(src=img)
+        .product__items__detail__content.detail-content
+            h4= h4
+            a(href="detail.html")
+                p Mỹ phẩm châu Âu
+            span.price= price
+                small đ
+            span.price.old(class=disable)= old
+                small đ
+        .product__items__detail__icon
+            include add-to-cart
+
+mixin social-item(className, classIcon, icon, name, disable)
+    div.item(class=className)
+        div.icon(class=classIcon)
+            i(class=icon)
+        p= name
+        .bar(class=disable)
+
+mixin list-path(list)
+    ul 
+        each item in list
+            li(class=item.className)
+                a(href="#")= item.content
+                i.fas.fa-angle-right(class=item.classIcon)
+
+mixin btn-social(classBtn, classIcon, content, disable)
+    .detail__info__social__content__item
+        a(href="#" class=classBtn)
+            i(class=classIcon)
+            | #{content}
+        .quantity(class=disable)
+            span 0
+
+mixin info-content(img, classText, classImg, className)
+    .info-product__content__item(class=className)
+        .info-product__content__item__text(class=classText)
+            h5 the mark of a legend
+            .border-bottom
+            .item-text
+                p Tự hào được ghi là năm mà Tyffany &amp; Co là
+                p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                p qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp 
+                p đường cong và đường nét mượt mà.
+        .info-product__content__item__img(class=classImg)
+            img(src=img)
+
+mixin top-selling(className)
+    .info-product__selling__item(class=className)
+        img(src='../../../assets/img/detail/img3.jpg')
+        .info-product__selling__item__content
+            p Mỹ phẩm châu Âu
+            .info-product__selling__item__content--appreciate
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                p ( 4 lượt mua )
+            .detail-price 
+                span 335.000đ
+
+mixin pagination
+    .pagination
+        .pagination__list
+            .pagination__list__horizontal
+                i.fas.fa-th-large(onclick="horizontal()")
+            .pagination__list__vertical
+                i.fas.fa-list(onclick="vertical()")
+        .pagination__num
+            i.fas.fa-caret-left
+            span.active 1
+            span 2
+            span 3
+            i.fas.fa-caret-right
+
+mixin grid-product(className, img, h4, old, disable)
+    .grid__content__product__item(class=className)
+        img(src=img)
+        .grid__content__product__item__info.detail-content
+            h4= h4
+            a(href="detail.html")
+                p Mỹ phẩm châu Âu
+            span.price 335.000
+                small đ
+            span.price.old(class=disable)= old
+                small đ
+        .grid__content__product__item__icon
+            include add-to-cart
+
+mixin list-product(className, img)
+    .list__content__product__item(class=className)
+        img(src=img)
+        .list__content__product__item__info
+            a(href="detail.html")
+                h4 Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
+            .list__content__product__item__info--appreciate
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                p ( 4 Lượt mua )
+            .list__content__product__item__text
+                p Tự hào được ghi là năm mà Tyffany &amp; Co là
+                p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                p qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp 
+                p đường cong và đường nét mượt mà.
+            .detail-price 
+                span 335.000đ
+            .list__content__product__item__icon
+                include add-to-cart
+
+mixin table(img, num, total)
+    tr
+        td
+            img(src=img)
+        td Lắc tay D&amp;G
+        td
+            span.price 345.000
+                small đ
+        td.num
+            span= num
+        td
+            span.price= total
+                small đ
+        td
+            i.fas.fa-trash-alt
+
+mixin table-acc(status, indept, disable)
+    tr
+        td #1006
+        td.date  May 13, 2013
+        td.color-red= status
+        td
+            span.total 350.000
+                small đ
+        td
+            span.total= indept
+                small(class=disable) đ
+
+mixin form-group(label, type, idInput, name, idError)
+    .form-group
+        label= label
+        input(id=idInput name=name type=type)
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        .error-message(id=idError)
+
+mixin blog-item(img, className)
+    .blog__content__posts__item(class=className)
+        img(src=img)
+        a(href="blog-detail.html")
+            h5 REVIEW SON KEM BOURJOIR VELVET
+        p Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức,
+            | khi mà dân tính xô nhau đi tắm Free để giải nhiệt.
+        span Bởi NamTran (27/05/2015)
+        .blog__content__posts__item__btn
+            a(href="#") Đọc thêm
+                i.fas.fa-angle-right
+            a(href="#") 23 Bình Luận
+
+mixin poster-item(img)
+    .blog-detail__aside__poster__item
+        img(src=img)
+        .blog-detail__aside__poster__item__text
+            h4  11
+                small / Tháng 5
+            p Đăng bởi bởi Giangle
+
+mixin process(className, name)
+    .process
+        .progressbar
+            div(class=className)
+                span= name
+            
+mixin customer(title, className)
+    .customer-item 
+        p(class=className)= title
+            span 

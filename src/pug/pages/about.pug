@@ -1,0 +1,28 @@
+extends ../layouts/about-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathAbout)
+        // Content About
+        section
+            .box
+                .about
+                    .about__title.title-content
+                        h1 về chúng tôi
+                    .about__content
+                        .about__content__img
+                            img(src="../../../assets/img/about-us/img-about.jpg")
+                        .about__content__text
+                            .about__content__text__logo.logo
+                                .about__content__text__logo--square.logo-square
+                                img.logo-img(src="../../../assets/img/home/mandala.png")
+                            .about__content__text__title
+                                h3 giới thiệu chung về mỹ phẩm handmade mandala
+                                p Hi, chào các nàng... sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.                        
+                                    | Hi, chào các nàng... sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.  
+                                    |sau khá nhiều lời hứa hảo thì hôm nay tớ quay lại hâm nóng Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+                                a(href="#") Xem thêm

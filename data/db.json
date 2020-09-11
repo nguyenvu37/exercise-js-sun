@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "manufacturer": "OHUI",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 395000,
+      "oldPrice": "",
+      "disable": "disable",
+      "img": "product5.jpg",
+      "color": ["Hồng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["ohui1.jpeg", "ohui2.jpg", "ohui3.jpeg", "ohui4.jpeg"],
+      "inCart": 1
+    },
+    {
+      "id": 2,
+      "manufacturer": "HOME",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 335000,
+      "oldPrice": 450000,
+      "disable": "",
+      "img": "product4.jpg",
+      "color": ["Vàng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["home1.jpg", "home2.jpg", "home3.jpg", "home4.jpeg"],
+      "inCart": 1
+    },
+    {
+      "id": 3,
+      "manufacturer": "DEBORA",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 435000,
+      "oldPrice": "",
+      "disable": "disable",
+      "img": "product6.jpg",
+      "color": ["Hồng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["ohui1.jpeg", "ohui2.jpg", "ohui3.jpeg", "ohui4.jpeg"],
+      "inCart": 1
+    },
+    {
+      "id": 4,
+      "manufacturer": "SARVON",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 350000,
+      "oldPrice": "",
+      "disable": "disable",
+      "img": "product3.jpg",
+      "color": ["Hồng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["sarvon1.jpg", "sarvon2.jpg", "sarvon3.jpg", "sarvon4.jpg"],
+      "inCart": 1
+    },
+    {
+      "id": 5,
+      "manufacturer": "TYFFANY",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 345000,
+      "oldPrice": 450000,
+      "disable": "",
+      "img": "product2.jpg",
+      "color": ["Hồng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["ohui1.jpeg", "ohui2.jpg", "ohui3.jpeg", "ohui4.jpeg"],
+      "inCart": 1
+    },
+    {
+      "id": 6,
+      "manufacturer": "TYFFANY",
+      "name": "Mỹ phẩm châu Âu",
+      "price": 335000,
+      "oldPrice": "",
+      "disable": "disable",
+      "img": "product1.jpg",
+      "color": ["Hồng nhạt", "Cam đất", "Đỏ đất", "Đỏ cam", "Cam đào"],
+      "imgDetail": ["home1.jpg", "home2.jpg", "home3.jpg", "home4.jpeg"],
+      "inCart": 1
+    }
+  ]
+}

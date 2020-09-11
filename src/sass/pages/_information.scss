@@ -1,0 +1,21 @@
+.information-checkout {
+  &__content {
+    width: 100%;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    &__form {
+      width: 100%;
+
+      button {
+        @include button(#000, 12px, 5px 10px, #fff);
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+    }
+  }
+}

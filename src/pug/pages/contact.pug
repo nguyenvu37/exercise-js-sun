@@ -1,0 +1,30 @@
+extends ../layouts/contact-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathContact)
+        // Content Contact
+        section
+            .box
+                .contact
+                    .contact__title.title-content
+                        h1 liên hệ
+                    .contact__content
+                        .contact__content__img
+                            img(src="../../../assets/img/contact-us/map.jpg")
+                        .contact__content__form
+                            form(action="")
+                                .contact__content__form__title
+                                    h3 gửi mail cho chúng tôi
+                                .contact__content__form__group
+                                    +form-group('Tên *', 'text')
+                                    +form-group('Email *', 'email')
+                                    .form-group
+                                        label Tin nhắn *
+                                        textarea(rows="11")
+                                    .contact__content__form__group__btn
+                                        a(href="#") gửi

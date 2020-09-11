@@ -1,0 +1,19 @@
+extends ../layouts/grid-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathGrid)
+        // Advertisement background
+        section.advertisement
+            .box
+                .advertisement__content
+                    h1 Giảm giá 50%
+                    .advertisement__content__time
+                        h4 trong vòng 3 ngày
+                        p ( 25/5 - 28/5/2015 ) 
+        // Content Grid Page
+        include ../layouts/grid-layout/content-grid

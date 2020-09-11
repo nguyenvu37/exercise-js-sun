@@ -1,0 +1,67 @@
+include variables
+include mixin
+
+header
+    .box
+        .nav
+            .nav__logo.logo
+                .nav__logo--square.logo-square
+                    a(href="index.html")
+                        img.logo-img(src="../../../assets/img/home/mandala.png")
+            .nav__menu
+                ul
+                    each menu in listMenu
+                        li(class=menu.className)
+                            a(href=menu.link)
+                                | #{menu.content}
+                                i(class=menu.i)
+                                if menu.dropdown
+                                    .arrow-up
+                                    .dropdown-list
+                                        each item in menu.dropdown
+                                            .dropdown-list__item
+                                                a(href="list.html").list-name= item.ul
+                                                ul
+                                                    each list in item.li
+                                                        li.list-item
+                                                            a(href="detail.html") #{list}
+            .nav__cart
+                a(href="cart.html")
+                    .cart
+                        i.fas.fa-shopping-cart
+                        .number-cart
+                            span
+                a(href="#")
+                    i.fas.fa-search.search
+                .nav__cart__bar
+                    input.nav__cart__bar--checkbox(type="checkbox" id="menu-toggle")
+                    label(for="menu-toggle")
+                        i.fas.fa-bars.bar
+                    .nav__cart__bar__menu
+                        .bar-logo.logo
+                            .bar-logo--square.logo-square
+                                a(href="index.html")
+                                    img.logo-img(src="../../../assets/img/home/mandala.png")
+                        .bar-menu
+                            ul
+                                each menu in listMenu
+                                    li(class=menu.className)
+                                        a(href=menu.link)
+                                            | #{menu.content}
+                                            if menu.dropdown
+                                                .dropdown-list
+                                                    each item in menu.dropdown
+                                                        .dropdown-list__item
+                                                            a(href="list.html").list-name= item.ul
+                                                            ul
+                                                                each list in item.li
+                                                                    li.list-item
+                                                                        a(href="detail.html") #{list}
+                        .bar-cart
+                            a(href="cart.html")
+                                .cart
+                                    i.fas.fa-shopping-cart
+                                    .number-cart 
+                                        span
+                            a(href="#")
+                                i.fas.fa-search.search

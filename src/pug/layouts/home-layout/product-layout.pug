@@ -1,0 +1,44 @@
+.product
+    .box
+        .product__title
+            .product__title__name
+                .product__title__name--new
+                    | Sản phẩm mới
+                .product__title__name--hot
+                    | Sản phẩm bán chạy
+                .product__title__name--special
+                    | Sản phẩm đặc biệt
+            .product__title__underline
+                img(src="../../../../assets/img/home/3.png")   
+            .product__title__menu
+                .horizontal-menu
+                    ul
+                        each item in listMenuProduct
+                            li
+                                a(href="#")= item
+                .vertical-menu
+                    ul
+                        .vertical-menu-left
+                            each item in listVerticalMenu1
+                                li
+                                    a(href="#")= item
+                        .vertical-menu-right
+                            each item in listVerticalMenu2
+                                li
+                                    a(href="#")= item
+    .product__items
+        figure
+            input#r1(type="radio" name="r" checked)
+            input#r2(type="radio" name="r" )
+            +product-item('../../../../assets/img/home/product1.jpg', 'TYFFANY', '335.000','', 'disable', 'product-detail1')
+            +product-item('../../../../assets/img/home/product5.jpg', 'OHUI', '335.000','', 'disable', 'product-detail2')
+            +product-item('../../../../assets/img/home/product4.jpg', 'HOME', '335.000','450.000','','product-detail3')
+            +product-item('../../../../assets/img/home/product6.jpg', 'DEBOMA', '335.000','', 'disable','product-detail4')
+            +product-item('../../../../assets/img/home/product3.jpg', 'SARVON', '335.000','', 'disable','product-detail5')
+            +product-item('../../../../assets/img/home/product2.jpg', 'TYFFANY', '335.000','', 'disable', 'product-detail6')
+            +product-item('../../../../assets/img/home/product8.jpg', 'HOME', '335.000','450.000','','product-detail7')
+            +product-item('../../../../assets/img/home/product7.jpg', 'DEBORA', '335.000','', 'disable','product-detail8')
+            .product__items--arrow-right
+                label(for="r2").fas.fa-arrow-right
+            .product__items--arrow-left
+                label(for="r1").fas.fa-arrow-left

@@ -1,0 +1,36 @@
+extends ../layouts/shopping-cart
+
+block script
+    script(src="js/all.js")
+    script(src="js/cart.js")
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathCart)
+        // Process Checkout
+        .box
+            +process("page-cart", "Step 1: Giỏ hàng")
+        // Content Cart
+        section.cart
+            .box
+                .cart__content
+                    .cart__content__title
+                        h1 Giỏ hàng
+                    .cart__content__table
+                        table
+                            tr
+                                each item in listThTable
+                                    th= item
+                            //- +table('../../../assets/img/cart/product.jpg', '1', '345.000')
+                            //- +table('../../../assets/img/cart/product.jpg', '2', '690.000')
+                    .cart__content__total
+                        h4 TỔNG CỘNG:
+                        span.price
+                    .cart__content__btn
+                        button.buying(type="button") Tiếp tục mua hàng
+                        button.delete(type="button") Xóa
+                        button.payment(type="button") Thanh toán 

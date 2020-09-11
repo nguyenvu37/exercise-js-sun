@@ -1,0 +1,30 @@
+.categories
+    .categories__content
+        .categories__content__title.border-solid
+            i.fas.fa-bars
+            h1 Danh mục sản phẩm
+        .categories__content__cosmetics.border-dotted
+            h2 mỹ phẩm
+                i.fas.fa-caret-right
+        .categories__content__jewelry.border-dotted
+            h2 trang sức
+                i.fas.fa-caret-down
+            ul
+                each item in listJewelry
+                    li #{item}
+        .categories__content__accessories.border-dotted
+            h2 phụ kiện
+                i.fas.fa-caret-right
+        .categories__content__perfume.border-dotted
+            h2 nước hoa
+                i.fas.fa-caret-right
+    .categories__compare
+        h1.border-solid so sánh sản phẩm
+        p   Bạn chưa có sản phẩm nào đẻ so sánh
+    .categories__tag
+        h1.border-solid tag sản phẩm
+        .categories__tag__btn
+            each item in listBtnTag
+                button(type="button" class=item.className)= item.content
+    .categories__img
+        img(src="../../../../assets/img/grid/mandala-store.jpg")

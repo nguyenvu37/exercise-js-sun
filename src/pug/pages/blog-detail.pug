@@ -1,0 +1,64 @@
+extends ../layouts/blog-detail
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathContact)
+        // Blog Detail content
+        section
+            .box
+                .blog-detail
+                    .blog-detail__title.title-content
+                        h1 blog
+                    .blog-detail__content
+                        aside
+                            .blog-detail__aside
+                                .blog-detail__aside__title
+                                    h3 bài viết mới nhất
+                                .blog-detail__aside__poster
+                                    +poster-item('../../../assets/img/blog-detail/img1.jpg')
+                                    +poster-item('../../../assets/img/blog-detail/img3.jpg')
+                                    +poster-item('../../../assets/img/blog-detail/img2.jpg')
+                                .blog-detail__aside__tag
+                                    h3 blog tags
+                                    .blog-detail__aside__tag__btn
+                                        each item in listBtnTagBlog
+                                            button(type="button")= item
+                                .blog-detail__aside__video
+                                    h3 latest video
+                                    .blog-detail__aside__video__img
+                                        .blog-detail__aside__video__img__overlay
+                                            .blog-detail__aside__video__img__overlay__icon
+                                                i.fas.fa-play
+                        article
+                            .blog-detail__article
+                                img(src="../../../assets/img/blog/img4.jpg")
+                                .blog-detail__article__title
+                                    h1  nàng béo không ngại diện váy áo nổi bật
+                                .blog-detail__article__post
+                                    p  Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức,
+                                        | khi mà dân tính xô nhau đi tắm Free để giải nhiệt.Trong tiết xuân hè nàng ngoại cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi nhã nhặn.
+                                        | Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển.
+                                        | Lối diện đồ hằng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean.
+                                        | Nữ blogger rực rỡ khi hòa trộn các gam đổ, hồng, tím... một cách vui tươi, kèm theo các phụ kiện điệu đà.
+                                    span Bởi NamTran (27/05/2015)
+                                    .blog-detail__article__post__btn
+                                        a(href="#") Đọc thêm
+                                            i.fas.fa-angle-right
+                                        a(href="#") 23 Bình Luận
+                                .blog-detail__article__tag
+                                    h5 Tag:
+                                    p Men
+                                .blog-detail__article__comments
+                                    form(action="#")
+                                        h3 đóng góp ý kiến
+                                        +form-group('Tên *', 'text')
+                                        +form-group('Email *', 'email')
+                                        .form-group
+                                            label Ý kiến *
+                                            textarea(rows="11")
+                                        .form-btn
+                                            a(href="#") Gửi ý kiến

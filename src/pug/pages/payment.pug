@@ -1,0 +1,37 @@
+extends ../layouts/payment-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathPayment)
+        // Process Checkout
+        .box
+            +process("page-payment", "Step 3: Hoàn thành thanh toán")
+        // Content Payment Complete
+        section
+            .payment-complete
+                .box
+                    .payment-complete__content
+                        .payment-complete__content__title.title-content
+                            h1 hoàn thành thanh toán
+                        .payment-complete__content__info
+                            .payment-complete__content__info__customer
+                                h4 THÔNG TIN KHÁCH HÀNG
+                                +customer("Người nhận:", "customer-receiver")
+                                +customer("Địa chỉ:", "customer-address")
+                                +customer("Email:", "customer-email")
+                                +customer("Số điện thoại:", "customer-phone")
+                            .payment-complete__content__info__product
+                                table
+                                    tr
+                                        each item in listTableCustomer
+                                            th= item
+                                .payment-complete__content__info__product__total
+                                    h4 TỔNG CỘNG:
+                                    span.price
+                                .payment-complete__content__info__product__btn
+                                    button.back-info(type="button" onclick="onBackInforPage()") Quay lại trang thông tin
+                                    button.checkout(type="button" onclick="onCheckout()") Thanh toán 

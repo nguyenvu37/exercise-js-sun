@@ -1,0 +1,35 @@
+extends ../layouts/register-layout
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathRegister)
+        // Content Register
+        section.register
+            .box
+                .register__content
+                    .register__content__title.title-content
+                        h1 đăng ký
+                    .register__content__form.form
+                        form(action="")
+                            .register__content__form__title1
+                                h3 thông tin cá nhân
+                            +form-group('Tên trước *', 'text')
+                            +form-group('Tên sau *', 'text')
+                            +form-group('Email *', 'email')
+                            +form-group('Password *', 'password')
+                            .register__content__form__notification
+                                p.point
+                                p.text Đăng ký nhận bản tin
+                            .register__content__form__title2
+                                h3 thông tin đăng nhập
+                            +form-group('Mật khẩu *', 'password')
+                            +form-group('Xác nhận mật khẩu', 'password')
+                            .register__content__form__btn.btn-form
+                                a(href="#") Gửi
+                                a(href="#")
+                                    i.fas.fa-reply
+                                    | Quay lại

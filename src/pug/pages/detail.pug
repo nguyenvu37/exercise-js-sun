@@ -1,0 +1,13 @@
+extends ../layouts/detail-layout.pug
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathDetail)
+        // Detail Product
+        include ../layouts/detail-layout/detail-product
+        // Information Product
+        include ../layouts/detail-layout/info-product

@@ -1,0 +1,27 @@
+extends ../layouts/login-page
+
+block main
+    main
+        // Path
+        section.path
+            .box
+                .path__content
+                    +list-path(listPathLogin)
+        // Content Login
+        section.login
+            .box
+                .login__content
+                    .login__content__title.title-content.btn-form
+                        h1 đăng nhập
+                        .login__content__title__btn.btn-form
+                            a(href="register.html") Đăng ký
+                    .login__content__form.form
+                        form(action="")
+                            .login__content__form__title
+                                h3 khách hàng đăng ký
+                                p Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                            +form-group('Địa chỉ email *', 'email')
+                            +form-group('Password *', 'password')
+                            .login__content__form__btn.btn-form
+                                p Quên Mật Khẩu?
+                                a(href="#") Đăng nhập

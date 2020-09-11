@@ -1,0 +1,79 @@
+extends ../layouts/default-layout
+
+block main
+    main
+        // Background image
+        include ../layouts/home-layout/background-img
+        // Policy
+        section
+            .box
+                .policy
+                    +policy('policy__transport','../../../assets/img/home/plane.png', 'Miễn phí vận chuyển')
+                    +policy('policy__gift','../../../assets/img/home/gift.png', 'Nhận ngay quà tặng trí giá 350.000đ')
+                    +policy('policy__discount', '../../../assets/img/home/star.png', 'Giảm 30% cho đơn hàng trên 5.000.000đ')
+        // Goods of Mandala
+        include ../layouts/home-layout/goods
+        // Testimonials
+        .testimonial
+            .box
+                .testimonial__bg
+                    .testimonial__bg__content
+                        figure
+                            +testimonial('../../../assets/img/home/img1.jpg')
+                            +testimonial('../../../assets/img/home/img2.jpg')
+                            +testimonial('../../../assets/img/home/img1.jpg')
+                        .testimonial__bg__content__btn
+                            button(type="button")
+                            button(type="button")
+                            button(type="button")
+        // Products Slider
+        include ../layouts/home-layout/product-layout
+        // Social
+        .socials
+            .social
+                +social-item('social__facebook', 'social__facebook__icon','fab fa-facebook-f', 'FACEBOOK')
+                +social-item('social__twitter', 'social__twitter__icon','fab fa-twitter', 'TWITTER')
+                +social-item('social__instagram', 'social__instagram__icon','fab fa-instagram', 'INSTAGRAM')
+                +social-item('social__google', 'social__google__icon','fab fa-google-plus-g', 'GOOGLE+')
+                +social-item('social__pinterest', 'social__pinterest__icon','fab fa-pinterest', 'PINTEREST')
+                +social-item('social__linkedin', 'social__linkedin__icon','fab fa-linkedin-in', 'LINKEDIN', 'disable')
+        // About & Blog & Contact
+        .info
+            .info__about
+                h4 VỀ CHÚNG TÔI
+                img.img-about(src="../../../assets/img/home/3.png")
+                .info__about__content
+                    .info__about__content__logo.logo
+                        .info__about__content__logo__square.logo-square
+                            img.logo-img(src="../../../assets/img/home/mandala.png")
+                    h5 GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
+                    p Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tính xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tính xô nhau đi tắm Free để giải nhiệt.sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tính xô nhau đi tắm Free để giải nhiệt.
+                    .info__about__content__btn
+                        a(href="#") Xem thêm
+            .info__blog
+                h4 BLOG
+                img(src="../../../assets/img/home/3.png")
+                .info__blog__content
+                    .info__blog__content__img
+                        img(src="../../../assets/img/home/img12.jpg")
+                    a(href="blog-detail.html")
+                        h5 REVIEW SON KEM BOURJOIR VELVET
+                    p Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tính xô nhau đi tắm Free để giải nhiệt.
+                    span Bởi NamTran (27/05/2015)
+                    .info__blog__content__btn
+                        a(href="#") Đọc thêm
+                            i.fas.fa-angle-right
+                        a(href="#") 23 Bình Luận
+            .info__contact
+                .info__contact__email
+                    h4 GỬI EMAIL CHO CHÚNG TÔI
+                    img(src="../../../assets/img/home/3.png")
+                    input(type="text" placeholder="Email của bạn")
+                    p Gửi email để nhận những ưu đãi mới nhất
+                    button(type="button") Gửi
+                .info__contact__content
+                    h4 TAG SẢN PHẨM
+                    img(src="../../../assets/img/home/3.png")
+                    .info__contact__content__btn
+                        each item in listBtn
+                            button(type="button") #{item}
